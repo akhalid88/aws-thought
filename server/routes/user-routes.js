@@ -3,8 +3,7 @@ const router = express.Router();
 const AWS = require("aws-sdk");
 const awsConfig = {
   region: "us-west-1",
-  endpoint: "http://localhost:8000",
-
+  // endpoint: "http://localhost:8000",
 };
 AWS.config.update(awsConfig);
 const dynamodb = new AWS.DynamoDB.DocumentClient();
@@ -137,7 +136,7 @@ router.delete('/users/:time/:username', (req, res) => {
 // router.put('/users/:username', (req, res) => {
 //   res.json({ "which": "which" })
 // });
-  // const { time, username } = req.params;
+// const { time, username } = req.params;
 
 //   var table = "Movies";
 
